@@ -1,0 +1,62 @@
+h1{margin:20px 0px;
+    font-weight: bolder;
+    padding: 20px;
+    color: #fffffe;
+    text-shadow:10px 10px 10px black;
+    text-align: center;
+    background-color: rgba(166, 59, 59, 0.952);
+
+}
+h2{
+    margin:20px 0px;
+    font-weight: bolder;
+    padding: 20px;
+    color: #ffffff;
+    text-shadow:10px 10px 10px rgba(10, 20, 9, 0.952);;
+    text-align: center;
+    background-color: rgba(15, 100, 84, 0.952);
+}
+
+.ol {margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+   
+}
+
+#cart { font-weight: bolder;
+    border-color: #848434;
+    background-color: rgb(0, 255, 98);
+    box-shadow:10px 10px 10px rgb(4, 13, 4);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+  
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+button{
+    border-color: wheat;
+   font-weight: bolder;
+    margin: 20px 0px;
+    box-shadow:10px 10px 10px green;
+    width: 100px;
+    padding: 10px;
+    color: #fffffe;
+    flex-wrap: wrap;
+    background-color: black;
+}
+button:hover{
+color: #090906;
+background-color: rgb(18, 255, 46);
+box-shadow:10px 10px 10px rgb(5, 15, 5);
+}
+.btn1{
+
+text-align: center;
+
+gap: 20px;
+}
