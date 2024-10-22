@@ -56,10 +56,12 @@ const products = [
 
 
 
-var div=document.querySelector(".ol");
+const div=document.querySelector(".ol");
+const btn1=document.querySelector(".btn1");
 
-products.forEach(item=>{
-    console.log(item);
+
+products.map(item=>{
+    // console.log(item);
     
     
         div.innerHTML+=`
@@ -80,10 +82,10 @@ products.forEach(item=>{
 
 function render(products){
     div.innerHTML="";
-products.forEach(item=>{
-console.log(item);
+products.map(item=>{
+// console.log(item);
 
-
+// console.log("Products in render:", products);
     div.innerHTML+=`
              <div id="cart">
                
@@ -99,17 +101,53 @@ console.log(item);
    
 });
 }
+// render(products)
 
-function filterArr(btn){
-    // console.log("check")
 
-const selectedCategory=btn.innerHTML;
-// console.log(selectedCategory)
- const filterproducts=products.filter(item=>item.category===selectedCategory);
- render(filterproducts);
+// SECOND WAY TO MAKE BUTTON DYNAMICALLY 
+
+const categories = [];
+
+products.map(item => {
+    if (categories.indexOf(item.category)===-1) {
+        categories.push(item.category);
+        // console.log(categories); 
+        
+
+        btn1.innerHTML += `<button onclick="filterArr('${item.category}')">${item.category}</button>`;
+    }
+});
+
+     
+
+    function filterArr(category){
+        // div.innerHTML=''
+        console.log("Selected category:", category);
+console.log("check")
+const filteredProducts = products.filter(item => item.category === category);
+    console.log("Filtered products:", filteredProducts);
+    render(filteredProducts);
+   
+    
+
+    
+    }
+    
+
+
+// First Way to make button for reneder
+
+// function filterArr(btn){
+//     // console.log("check")
+
+// const selectedCategory=btn.innerHTML;
+// // console.log(selectedCategory)
+//  const filterproducts=products.filter(item=>item.category===selectedCategory);
+//  render(filterproducts);
 
  
-}
+// }
+
 
 
 
